@@ -31,13 +31,41 @@
 
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-function isLoginValid(login) {}
+function isLoginValid(login) {
+  // if (login.length >= 4 && login.length <= 16) {
+  //   return true;
+  // }
 
-function isLoginUnique(allLogins, login) {}
+  // return false;
 
-function addLogin(allLogins, login) {}
+  return login.length >= 4 && login.length <= 16 ? true : false;
+}
+
+function isLoginUnique(allLogins, login) {
+  return !allLogins.includes(login);
+}
+
+function logMessage(text) {
+  console.log(text);
+}
+
+function addLogin(allLogins, login) {
+  let message;
+
+  if (isLoginValid(login) && isLoginUnique(allLogins, login)) {
+    message = 'Логін успішно доданий!';
+    allLogins.push(login);
+  } else if (!isLoginUnique(allLogins, login)) {
+    message = 'Такий логін вже використовується!';
+  } else {
+    message = 'Помилка! Логін має бути від 4 до 16 символів';
+  }
+
+  logMessage(message);
+}
 
 addLogin(logins, 'Ajax');
 addLogin(logins, 'robotGoogles');
 addLogin(logins, 'Zod');
 addLogin(logins, 'jqueryisextremelyfast');
+console.log(logins);

@@ -3,4 +3,11 @@
  * Даний рядок; потрібно написати функцію, яка дозволяє повернути значення true, якщо рядок є паліндром, і false - якщо ні. При цьому потрібно враховувати прогалини та розділові знаки.
  */
 
-function palindrome(string) {}
+function palindrome(string) {
+  const normalizeString = string.toLowerCase().trim();
+
+  return normalizeString === normalizeString.split('').reverse().join('');
+}
+
+console.log(palindrome('     Anna '));
+console.log(palindrome('John'));

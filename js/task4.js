@@ -3,6 +3,17 @@
  * Гласними є "a", "e", "i", "o", "u".
  */
 
-function findVowels(string) {}
+// function findVowels(string) {
+//   let count = [];
+//   const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-console.log(findVowels('anna'));
+//   for (const char of string.toLowerCase()) {
+//     if (vowels.includes(char)) {
+//       count.push(char);
+//     }
+//   }
+
+//   return count.join('');
+// }
+
+// console.log(findVowels('vIctoria'));
